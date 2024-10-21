@@ -242,7 +242,7 @@ if __name__ == '__main__':
         num_train_epochs=args.train_epochs,
         logging_steps=8,
         learning_rate=args.learning_rate,
-        save_total_limit=5, # 限制保存的模型检查点的总数，即限制保存模型的历史版本数量
+        save_total_limit=5,
         load_best_model_at_end=True,
         metric_for_best_model="accuracy",
     )
