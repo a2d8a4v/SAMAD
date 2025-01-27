@@ -1,4 +1,4 @@
-# SAMAD (Speech Assessment Multi-Aspect Design)
+# [SAMAD](https://ieeexplore.ieee.org/document/10832269) (Speech Assessment Multi-Aspect Design)
 <img src="/icon/SAMAD.png" alt="" width="578" height="450">
 
 ## Package Requirements
@@ -35,4 +35,17 @@ SAMAD is a speech assessment model which consists of three important ingredients
 ## Results
 Enhanced existing models, successfully improving recognition accuracy by 9% in a 5-scale classification task
 <img src="/icon/seen.png" alt="" width="574" height="182">
+
+
+## Citation
+If you find this work helpful, please consider citing us:
+```bibtex
+@INPROCEEDINGS{10832269,
+  author={Peng, Wen-Hsuan and Chen, Sally and Chen, Berlin},
+  booktitle={2024 IEEE Spoken Language Technology Workshop (SLT)}, 
+  title={Enhancing Automatic Speech Assessment Leveraging Heterogeneous Features and Soft Labels For Ordinal Classification}, 
+  year={2024},
+  pages={945-952},
+  keywords={Adaptation models;Conferences;Neural networks;Self-supervised learning;Speech enhancement;Optimization;Automated speech assessment;Multi-modal model;End-to-end neural network},
+  doi={10.1109/SLT61566.2024.10832269}}
 
