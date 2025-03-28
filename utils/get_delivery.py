@@ -16,6 +16,8 @@ def save_data(data, filename):
     with open(filename, 'w') as file:
         json.dump(data, file, indent=2)
 
+
+# the main reason "get_delivery" file need a path is for the speark_id and wav_path
 file_path_json = '/share/nas165/peng/whisperX/LTTC_Intermediate.json'
 # file_path_json = '/share/nas165/peng/whisperX/data.json'
 # file_path = '/share/nas165/peng/thesis_project/delivery_feat/Delivery_0508.csv'
@@ -32,8 +34,7 @@ new_dict = {}
 
 for index, row in df.iterrows():
     temp_dict = {}
-    # if index == 2:
-    #     break
+
     print(index)
     speaker_id = str(row['speaker_id'])
     file_path = row['wav_path']
@@ -145,26 +146,6 @@ for index, row in df.iterrows():
         print('Save 10 files')
         save_data(new_dict, 'LTTC_Intermediate_word_level_0509.json')
 
-    # mean_pitch	mean_intensity	duration long_silence	silence	
-
-    # temp_dict['utt_mean_pitch'] = df['mean_pitch']
-    # temp_dict['utt_mean_intensity'] = df['mean_intensity']
-    # temp_dict['utt_duration'] = df['duration']
-
-    # temp_dict['utt_long_silence'] = df['long_silence']
-    # temp_dict['utt_long_silence_num'] = str(df['long_silence_num'])
-    # temp_dict['utt_mean_long_silence'] = df['mean_long_silence']
-
-    # temp_dict['utt_silence'] = df['silence']
-    # temp_dict['utt_silence_num'] = str(df['silence_num'])
-    # temp_dict['utt_mean_silence'] = df['mean_silence']
-
-    # temp_dict['utt_std_energy'] = df['std_energy']
-    # temp_dict['utt_avg_spectral'] = df['avg_spectral']
-    # temp_dict['utt_avg_energy_entropy'] = df['avg_energy_entropy']
-    # temp_dict['utt_zero_cross_num'] = str(df['zero_cross_num'])
-
-    
     # # 输出结果
     # print("Energy Entropy:", type(np.mean(energy_entropy)))
     # print("Standard Deviation of Energy:", std_dev_energy)
